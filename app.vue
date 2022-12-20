@@ -23,6 +23,15 @@ const { audioSrc, controls } = useAudioPlayer()
 </script>
 
 <template>
+  <Head>
+    <Link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed"
+      href="/rss.xml"
+    ></Link>
+  </Head>
+
   <header
     class="bg-slate-50 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-112 lg:items-start lg:overflow-y-auto xl:w-120"
   >

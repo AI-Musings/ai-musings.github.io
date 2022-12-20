@@ -4,4 +4,8 @@ export default defineNuxtConfig({
     //
     '@nuxtjs/tailwindcss',
   ],
+
+  generate: {
+    routes: ['/rss.xml'],
+  },
 })
