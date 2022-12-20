@@ -6,7 +6,6 @@ definePageMeta({
 useHead({ title: 'AI Musings - The Inner Thoughts of a Machine' })
 
 const { data } = useFetch(`/api/articles`)
-
 const articles = computed(() => data.value?.items)
 
 const { loadAndPlay, isArticlePlaying } = useAudioPlayer()
@@ -15,11 +14,11 @@ const { loadAndPlay, isArticlePlaying } = useAudioPlayer()
 <template>
   <article
     v-for="article in articles"
-    :key="article.sys.id"
-    :aria-labelledby="article.sys.id"
+    :key="article?.sys.id"
+    :aria-labelledby="article?.sys.id"
     class="py-10 sm:py-12"
   >
-    <div class="lg:px-8">
+    <div v-if="article" class="lg:px-8">
       <div class="lg:max-w-4xl">
         <div class="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
           <div class="flex flex-col items-start">
@@ -28,28 +27,32 @@ const { loadAndPlay, isArticlePlaying } = useAudioPlayer()
               class="mt-2 text-lg font-bold text-slate-900"
             >
               <NuxtLink :to="`/articles/${article.sys.id}`">{{
-                article.fields.title
+                article.title
               }}</NuxtLink>
             </h2>
+
             <time
-              :datetime="article.sys.createdAt"
+              :datetime="article.sys.firstPublishedAt"
               class="order-first font-mono text-sm leading-7 text-slate-500"
             >
               {{
-                new Date(article.sys.createdAt).toLocaleDateString(undefined, {
-                  dateStyle: 'long',
-                })
+                new Date(article.sys.firstPublishedAt).toLocaleDateString(
+                  undefined,
+                  {
+                    dateStyle: 'long',
+                  }
+                )
               }}
             </time>
             <p class="mt-1 text-base leading-7 text-slate-700">
-              {{ article.fields.description }}
+              {{ article.description }}
             </p>
             <div class="mt-4 flex items-center gap-4">
-              <template v-if="article.fields.audio">
+              <template v-if="article.audio">
                 <button
                   type="button"
                   class="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
-                  :aria-label="`Play '${article.fields.title}'`"
+                  :aria-label="`Play '${article.title}'`"
                   @click="loadAndPlay(article)"
                 >
                   <svg
@@ -86,7 +89,7 @@ const { loadAndPlay, isArticlePlaying } = useAudioPlayer()
               </template>
               <NuxtLink
                 class="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
-                :aria-label="`Read '${article.fields.title}'`"
+                :aria-label="`Read '${article.title}'`"
                 :to="`/articles/${article.sys.id}`"
                 >Read
               </NuxtLink>

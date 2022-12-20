@@ -61,7 +61,7 @@ const {
           title="5: Bill Lumbergh"
           :to="`/articles/${article.sys.id}`"
         >
-          {{ article.fields.title }}
+          {{ article.title }}
         </NuxtLink>
         <div class="flex justify-between gap-6">
           <div class="flex items-center md:hidden">

@@ -1,5 +1,5 @@
 import { useMediaControls } from '@vueuse/core'
-import { Entry } from 'contentful'
+import { Article } from '~~/types/contentful'
 
 const audioRef = ref()
 const audioSrc = ref('')
@@ -8,7 +8,7 @@ const controls = useMediaControls(audioRef, {
   src: audioSrc,
 })
 
-const article = ref<Entry<ContentfulArticle>>()
+const article = ref<Article>()
 
 const playBackSpeeds = [0.5, 1, 1.5, 2]
 
@@ -17,8 +17,8 @@ export const useAudioPlayer = () => {
     () => `${(controls.currentTime.value / controls.duration.value) * 100}%`
   )
 
-  const loadAndPlay = async (_article: Entry<ContentfulArticle>) => {
-    const src = _article.fields.audio?.fields.file.url
+  const loadAndPlay = async (_article: Article) => {
+    const src = _article.audio?.url
 
     if (!src) return
 
@@ -33,7 +33,7 @@ export const useAudioPlayer = () => {
     controls.playing.value = true
   }
 
-  const isArticlePlaying = (_article: Entry<ContentfulArticle>) =>
+  const isArticlePlaying = (_article: Article) =>
     article.value?.sys.id === _article.sys.id && controls.playing.value
 
   const backTen = () => (controls.currentTime.value -= 10)

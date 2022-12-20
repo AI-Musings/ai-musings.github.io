@@ -1,31 +1,29 @@
 <script setup lang="ts">
 const { params } = useRoute()
 
-const { data: entry } = await useFetch(`/api/articles/${params.id}`)
+const { data: article } = await useFetch(`/api/articles/${params.id}`)
 
 const { loadAndPlay, isArticlePlaying } = useAudioPlayer()
 </script>
 
 <template>
-  <article v-if="entry" class="py-16 lg:py-36">
+  <article v-if="article" class="py-16 lg:py-36">
     <div class="lg:px-8">
       <div class="lg:max-w-4xl">
         <div class="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
-          <!-- <pre>{{ entry.fields }}</pre> -->
-
           <!--  -->
           <header class="flex flex-col">
             <div class="flex items-center gap-6">
               <button
-                v-if="entry.fields.audio"
-                @click="loadAndPlay(entry!)"
+                v-if="article.audio"
+                @click="loadAndPlay(article!)"
                 type="button"
                 class="group relative flex flex-shrink-0 items-center justify-center rounded-full bg-slate-700 hover:bg-slate-900 focus:outline-none focus:ring-slate-700 h-18 w-18 focus:ring focus:ring-offset-4"
-                :aria-label="isArticlePlaying(entry) ? 'Pause' : 'Play'"
+                :aria-label="isArticlePlaying(article) ? 'Pause' : 'Play'"
               >
                 <div class="absolute -inset-3 md:hidden"></div>
                 <svg
-                  v-if="isArticlePlaying(entry)"
+                  v-if="isArticlePlaying(article)"
                   aria-hidden="true"
                   viewBox="0 0 22 28"
                   class="fill-white group-active:fill-white/80 h-5 w-5"
@@ -49,14 +47,14 @@ const { loadAndPlay, isArticlePlaying } = useAudioPlayer()
               </button>
               <div class="flex flex-col">
                 <h1 class="mt-2 text-4xl font-bold text-slate-900">
-                  {{ entry.fields.title }}
+                  {{ article.title }}
                 </h1>
                 <time
-                  :datetime="entry.sys.createdAt"
+                  :datetime="article.sys.firstPublishedAt"
                   class="order-first font-mono text-sm leading-7 text-slate-500"
                 >
                   {{
-                    new Date(entry.sys.createdAt).toLocaleDateString(
+                    new Date(article.sys.firstPublishedAt).toLocaleDateString(
                       undefined,
                       {
                         dateStyle: 'long',
@@ -67,7 +65,7 @@ const { loadAndPlay, isArticlePlaying } = useAudioPlayer()
               </div>
             </div>
             <p class="ml-24 mt-3 text-lg font-medium leading-8 text-slate-700">
-              {{ entry.fields.description }}
+              {{ article.description }}
             </p>
 
             <!-- <pre>{{ doc.categories }}</pre> -->
@@ -90,7 +88,7 @@ const { loadAndPlay, isArticlePlaying } = useAudioPlayer()
           <section
             class="mt-8 prose dark:prose-invert"
             id="content-body"
-            v-html="useMarkdown(entry.fields.body)"
+            v-html="useMarkdown(article.body!)"
           ></section>
         </div>
       </div>

@@ -16,4 +16,4 @@ export const useContentfulJsonToHtml = (body: Document | undefined) => {
   return documentToHtmlString(body, options)
 }
 
-export const useMarkdown = (body: string) => marked.parse(body)
+export const useMarkdown = (body?: string) => (body ? marked.parse(body) : '')

@@ -1,10 +1,27 @@
-import { client } from '~~/server/contentful'
+import { graphql } from '~~/server/contentful'
+import { gql } from 'graphql-tag'
 
 export default defineEventHandler(async (event) => {
-  const entries = await client.getEntries<ContentfulArticle>({
-    content_type: 'article',
-    order: '-sys.createdAt',
-  })
+  const query = gql`
+    query {
+      articleCollection(order: sys_firstPublishedAt_DESC) {
+        items {
+          sys {
+            id
+            firstPublishedAt
+          }
+          title
+          description
+          audio {
+            url
+            size
+          }
+        }
+      }
+    }
+  `
 
-  return entries
+  const { articleCollection } = await graphql({ query })
+
+  return articleCollection
 })

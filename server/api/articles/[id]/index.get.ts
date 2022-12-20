@@ -1,12 +1,39 @@
-import { client } from '~~/server/contentful'
+import { graphql } from '~~/server/contentful'
+import { gql } from 'graphql-tag'
 
 export default defineEventHandler(async (event) => {
   const { id } = event.context.params
 
-  const entry = await client.getEntry<ContentfulArticle>(id.toString())
+  const query = gql`
+    query Article($id: String!) {
+      article(id: $id) {
+        sys {
+          id
+          firstPublishedAt
+        }
+        title
+        description
+        body
+        categories
+        updateAudio
+        audio {
+          url
+        }
+      }
+    }
+  `
 
-  if (!entry.fields.updateAudio) {
-    return entry
+  const { article } = await graphql({
+    query,
+    variables: {
+      id,
+    },
+  })
+
+  return article
+
+  if (!article?.updateAudio) {
+    return article
   }
 
   // update audio
@@ -15,7 +42,12 @@ export default defineEventHandler(async (event) => {
   })
 
   // refresh entry
-  const updatedEntry = await client.getEntry<ContentfulArticle>(id.toString())
+  const { article: updatedArticle } = await graphql({
+    query,
+    variables: {
+      id,
+    },
+  })
 
-  return updatedEntry
+  return updatedArticle
 })
