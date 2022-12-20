@@ -7,10 +7,9 @@ export const client = contentful.createClient({
   environment: process.env.CONTENTFUL_ENVIRONMENT!,
 })
 
-// export const manager = contentfulManagement.createClient({
-//   space: process.env.CONTENTFUL_SPACE_ID!,
-//   accessToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN!,
-// })
+export const manager = contentfulManagement.createClient({
+  accessToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN!,
+})
 
 export const endpoint = `https://api.contentful.com/spaces/${process.env
   .CONTENTFUL_SPACE_ID!}`
