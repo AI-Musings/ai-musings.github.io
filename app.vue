@@ -19,6 +19,8 @@ useHead({
   },
 })
 
+const config = useAppConfig()
+
 const { audioSrc, controls } = useAudioPlayer()
 </script>
 
@@ -39,10 +41,21 @@ const { audioSrc, controls } = useAudioPlayer()
       class="hidden lg:sticky lg:top-0 lg:flex lg:w-16 lg:flex-none lg:items-center lg:whitespace-nowrap lg:py-12 lg:text-sm lg:leading-7 lg:[writing-mode:vertical-rl]"
     >
       <span class="font-mono text-slate-500">by</span>
-      <span class="mt-6 flex gap-6 font-bold text-slate-900"
-        >Kevin McCarthy<span aria-hidden="true" class="text-slate-400">/</span
-        >Kalyn Donovan</span
-      >
+      <span class="mt-6 flex gap-6 font-bold text-slate-900">
+        <!-- authors -->
+        <template v-for="(author, i) in config.authors">
+          {{ author }}
+          <span
+            v-if="i + 1 !== config.authors.length"
+            aria-hidden="true"
+            class="text-slate-400"
+            >/</span
+          >
+        </template>
+
+        <!-- Kevin McCarthy
+        <span aria-hidden="true" class="text-slate-400">/</span> Kalyn Donovan -->
+      </span>
     </div>
     <div
       class="relative z-10 mx-auto px-4 pb-4 pt-10 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:border-slate-200 lg:py-12 lg:px-8 xl:px-12"
@@ -54,7 +67,7 @@ const { audioSrc, controls } = useAudioPlayer()
       >
         <img
           alt=""
-          src="//images.ctfassets.net/ewxi5bk4tlk4/7zGluFqrRs2vyfwTgyUy7C/2ec31953d8b55406373ddc15f67e15a5/dalle-2022-12-14-110308---a-robot-deep-in-thought-in-the-style-of-caravaggio.png?w=500"
+          :src="`${config.coverArt}?w=500`"
           decoding="async"
           data-nimg="1"
           class="w-full"
@@ -70,10 +83,10 @@ const { audioSrc, controls } = useAudioPlayer()
 
       <div class="mt-10 text-center lg:mt-12 lg:text-left">
         <p class="text-xl font-bold text-slate-900">
-          <NuxtLink to="/">AI Musings</NuxtLink>
+          <NuxtLink to="/">{{ config.title }}</NuxtLink>
         </p>
         <p class="mt-3 text-lg font-medium leading-8 text-slate-700">
-          The Inner Thoughts of a Machine
+          {{ config.tagline }}
         </p>
       </div>
       <section class="mt-12 hidden lg:block">
@@ -93,9 +106,7 @@ const { audioSrc, controls } = useAudioPlayer()
           <span class="ml-2.5">About</span>
         </h2>
         <p class="mt-2 text-base leading-7 text-slate-700 lg:line-clamp-4">
-          Join us on a journey into the mind of a machine. "AI Musings"
-          showcases the original writing of an artificial intelligence,
-          exploring its thoughts and ideas on a variety of topics.
+          {{ config.description }}
         </p>
       </section>
       <!-- social -->
@@ -118,6 +129,7 @@ const { audioSrc, controls } = useAudioPlayer()
         <div
           class="h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden"
         ></div>
+        <!--  -->
         <ul
           role="list"
           class="mt-4 flex justify-center gap-10 text-base font-medium leading-7 text-slate-700 sm:gap-8 lg:flex-col lg:gap-4"
@@ -356,9 +368,7 @@ const { audioSrc, controls } = useAudioPlayer()
           <span class="ml-2.5">About</span>
         </h2>
         <p class="mt-2 text-base leading-7 text-slate-700 lg:line-clamp-4">
-          Join us on a journey into the mind of a machine. "AI Musings"
-          showcases the original writing of an artificial intelligence,
-          exploring its thoughts and ideas on a variety of topics.
+          {{ config.description }}
         </p>
       </section>
       <h2
@@ -376,8 +386,16 @@ const { audioSrc, controls } = useAudioPlayer()
         <span class="ml-2.5">by</span>
       </h2>
       <div class="mt-2 flex gap-6 text-sm font-bold leading-7 text-slate-900">
-        Kevin McCarthy<span aria-hidden="true" class="text-slate-400">/</span
-        >Kalyn Donovan
+        <!-- authors -->
+        <template v-for="(author, i) in config.authors">
+          {{ author }}
+          <span
+            v-if="i + 1 !== config.authors.length"
+            aria-hidden="true"
+            class="text-slate-400"
+            >/</span
+          >
+        </template>
       </div>
     </div>
   </footer>
