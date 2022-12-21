@@ -10,6 +10,28 @@ const {
   forwardTen,
   cyclePlaybackSpeed,
 } = useAudioPlayer()
+
+const config = useAppConfig()
+
+onMounted(() => {
+  if ('mediaSession' in navigator) {
+    watch(
+      () => article.value?.title,
+      () => {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: article.value?.title ?? '',
+          artist: config.title,
+          album: config.tagline,
+          artwork: [
+            {
+              src: `${config.coverArt}?w=512`,
+            },
+          ],
+        })
+      }
+    )
+  }
+})
 </script>
 
 <template>
