@@ -30,8 +30,6 @@ export default defineEventHandler(async (event) => {
     },
   })
 
-  return article
-
   if (!article?.updateAudio) {
     return article
   }
