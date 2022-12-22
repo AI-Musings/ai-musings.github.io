@@ -3,6 +3,10 @@ const { params } = useRoute()
 
 const { data: article } = await useFetch(`/api/articles/${params.id}`)
 
+useHead({
+  title: `${article.value?.title} - AI Musings: The Inner Thoughts of a Machine`,
+})
+
 const { loadAndPlay, isArticlePlaying } = useAudioPlayer()
 </script>
 

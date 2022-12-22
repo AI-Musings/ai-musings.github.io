@@ -12,6 +12,10 @@ export default defineEventHandler(async (event) => {
           }
           title
           description
+          categories
+          image {
+            url
+          }
           audio {
             url
             size

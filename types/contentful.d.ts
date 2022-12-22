@@ -24,6 +24,8 @@ export type Article = Entry & {
   categories?: Maybe<Array<Maybe<Scalars['String']>>>;
   contentfulMetadata: ContentfulMetadata;
   description?: Maybe<Scalars['String']>;
+  image?: Maybe<Asset>;
+  inspirations?: Maybe<Array<Maybe<Scalars['String']>>>;
   linkedFrom?: Maybe<ArticleLinkingCollections>;
   sys: Sys;
   title?: Maybe<Scalars['String']>;
@@ -52,6 +54,19 @@ export type ArticleCategoriesArgs = {
 
 /** [See type definition](https://app.contentful.com/spaces/ewxi5bk4tlk4/content_types/article) */
 export type ArticleDescriptionArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/ewxi5bk4tlk4/content_types/article) */
+export type ArticleImageArgs = {
+  locale?: InputMaybe<Scalars['String']>;
+  preview?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/ewxi5bk4tlk4/content_types/article) */
+export type ArticleInspirationsArgs = {
   locale?: InputMaybe<Scalars['String']>;
 };
 
@@ -104,6 +119,11 @@ export type ArticleFilter = {
   description_not?: InputMaybe<Scalars['String']>;
   description_not_contains?: InputMaybe<Scalars['String']>;
   description_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  image_exists?: InputMaybe<Scalars['Boolean']>;
+  inspirations_contains_all?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  inspirations_contains_none?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  inspirations_contains_some?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  inspirations_exists?: InputMaybe<Scalars['Boolean']>;
   sys?: InputMaybe<SysFilter>;
   title?: InputMaybe<Scalars['String']>;
   title_contains?: InputMaybe<Scalars['String']>;

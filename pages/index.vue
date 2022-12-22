@@ -3,7 +3,7 @@ definePageMeta({
   layout: 'home',
 })
 
-useHead({ title: 'AI Musings - The Inner Thoughts of a Machine' })
+useHead({ title: `AI Musings: The Inner Thoughts of a Machine` })
 
 const { data } = useFetch(`/api/articles`)
 const articles = computed(() => data.value?.items)

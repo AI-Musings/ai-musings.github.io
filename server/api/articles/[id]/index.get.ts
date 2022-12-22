@@ -15,6 +15,9 @@ export default defineEventHandler(async (event) => {
         description
         body
         categories
+        image {
+          url
+        }
         updateAudio
         audio {
           url
