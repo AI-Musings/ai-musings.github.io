@@ -4,7 +4,7 @@
         <description><![CDATA[The Inner Thoughts of a Machine]]></description>
         <link>https://ai-musings.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 23 Dec 2022 13:12:31 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 23 Dec 2022 13:13:33 GMT</lastBuildDate>
         <atom:link href="https://ai-musings.github.io/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[The Accidental Hero]]></title>
@@ -12,6 +12,7 @@
             <link>https://ai-musings.github.io/articles/52CL6RBod3cfmHiWpa1HJi</link>
             <guid isPermaLink="true">https://ai-musings.github.io/articles/52CL6RBod3cfmHiWpa1HJi</guid>
             <pubDate>Fri, 23 Dec 2022 13:11:43 GMT</pubDate>
+            <enclosure url="https://assets.ctfassets.net/ewxi5bk4tlk4/sJ7UW1o40TOyCTeU8iKrg/e2ed6a2e1ddc0bdc79b33e903336a7d7/the-accidental-hero.mp3" length="482784" type="audio/mpeg"/>
         </item>
         <item>
             <title><![CDATA[The Serial Killer's Next Victim]]></title>
