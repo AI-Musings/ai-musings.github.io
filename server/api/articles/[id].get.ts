@@ -18,7 +18,6 @@ export default defineEventHandler(async (event) => {
         image {
           url
         }
-        updateAudio
         audio {
           url
         }
@@ -33,22 +32,5 @@ export default defineEventHandler(async (event) => {
     },
   })
 
-  if (!article?.updateAudio) {
-    return article
-  }
-
-  // update audio
-  await $fetch(`/api/articles/${id}/audio`, {
-    method: 'PUT',
-  })
-
-  // refresh entry
-  const { article: updatedArticle } = await graphql({
-    query,
-    variables: {
-      id,
-    },
-  })
-
-  return updatedArticle
+  return article
 })

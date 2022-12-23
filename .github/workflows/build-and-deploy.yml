@@ -1,7 +1,9 @@
 name: Build and Deploy
 on:
+  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#repository_dispatch
   repository_dispatch:
 
+  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
   workflow_dispatch:
 
   push:
@@ -10,6 +12,7 @@ on:
 
 jobs:
   build-and-deploy:
+    if: ${{ !github.event.client_payload.updateAudio }}
     runs-on: ubuntu-latest
     environment: github-pages
     steps:

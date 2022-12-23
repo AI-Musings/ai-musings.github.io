@@ -8,7 +8,8 @@
     "preview": "nuxt preview",
     "typecheck": "nuxt typecheck",
     "postinstall": "nuxt prepare",
-    "generate:types": "graphql-codegen -r dotenv/config --config ./codegen-config.js"
+    "generate:types": "graphql-codegen -r dotenv/config --config ./codegen-config.js",
+    "generate:audio": "ts-node -O '{\"module\": \"commonjs\"}' -r dotenv/config tasks/audio.ts ${0}"
   },
   "devDependencies": {
     "@contentful/rich-text-html-renderer": "^16.0.2",

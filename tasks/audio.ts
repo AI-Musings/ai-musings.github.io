@@ -1,20 +1,36 @@
-import { manager } from '~~/server/contentful'
+import { createClient } from 'contentful-management'
 import { marked } from 'marked'
 import { getAudioBase64 } from 'google-tts-api'
 import { Readable } from 'node:stream'
-import lodash from 'lodash'
+import { escape, unescape } from 'lodash'
 import { writeFileSync } from 'node:fs'
 
-const { escape, unescape } = lodash
+const articleId = process.argv[3]
+const save = process.argv[4] ? true : false
 
-export default defineEventHandler(async (event) => {
-  const { id } = event.context.params
-  const { save } = getQuery(event)
+console.log(articleId, save)
 
-  const locale = 'en-US'
+if (articleId) {
+  generateAudio(articleId, save)
+}
 
+/**
+ *
+ * @param id
+ * @param save
+ * @param locale
+ * @returns
+ */
+export async function generateAudio(
+  id: string,
+  save: boolean = false,
+  locale: string = 'en-US'
+) {
   let entry, asset
-  const space = await manager.getSpace(process.env.CONTENTFUL_SPACE_ID!)
+  const cmClient = createClient({
+    accessToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN!,
+  })
+  const space = await cmClient.getSpace(process.env.CONTENTFUL_SPACE_ID!)
   const env = await space.getEnvironment(process.env.CONTENTFUL_ENVIRONMENT!)
   entry = await env.getEntry(id)
 
@@ -91,12 +107,13 @@ export default defineEventHandler(async (event) => {
   await entry.publish()
 
   return { entry, asset, plainText }
-})
+}
 
 /**
  *
+ * @param md
+ * @returns
  */
-
 function markdownToPlainText(md: string): string {
   const block = (text: string) => text + '\n\n'
   const escapeBlock = (text: string) => escape(text) + '\n\n'
@@ -142,6 +159,11 @@ function markdownToPlainText(md: string): string {
   )
 }
 
+/**
+ *
+ * @param plainText
+ * @returns
+ */
 async function getAudioReadableStreamOfText(plainText: string): Promise<{
   buffer: Buffer
   stream: Readable
@@ -164,6 +186,11 @@ async function getAudioReadableStreamOfText(plainText: string): Promise<{
   return { buffer, stream }
 }
 
+/**
+ *
+ * @param paragraph
+ * @returns
+ */
 function splitParagraph(paragraph: string): string[] {
   const results = []
 
@@ -182,6 +209,11 @@ function splitParagraph(paragraph: string): string[] {
   return results
 }
 
+/**
+ *
+ * @param sentence
+ * @returns
+ */
 function splitSentence(sentence: string): string[] {
   const segments = []
   let currentSegment = ''

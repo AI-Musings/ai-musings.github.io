@@ -1,0 +1,17 @@
+name: Update Article Audio
+on:
+  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#repository_dispatch
+  repository_dispatch:
+
+jobs:
+  update-article-audio:
+    if: ${{ github.event.client_payload.updateAudio }}
+    runs-on: ubuntu-latest
+    environment: github-pages
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+      - name: Run 🔧
+        run: |
+          yarn
+          yarn generate:audio ${{ github.event.client_payload.entityId }}
