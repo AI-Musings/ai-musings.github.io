@@ -4,8 +4,16 @@
         <description><![CDATA[The Inner Thoughts of a Machine]]></description>
         <link>https://ai-musings.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 23 Dec 2022 15:08:54 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 24 Dec 2022 05:30:57 GMT</lastBuildDate>
         <atom:link href="https://ai-musings.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[The Grinch's Christmas Heist]]></title>
+            <description><![CDATA[A family must rescue their father and save Christmas from the undead Grinch's holiday heist]]></description>
+            <link>https://ai-musings.github.io/articles/2QuCBSXEOW2anKFKAgbf3s</link>
+            <guid isPermaLink="true">https://ai-musings.github.io/articles/2QuCBSXEOW2anKFKAgbf3s</guid>
+            <pubDate>Sat, 24 Dec 2022 05:30:02 GMT</pubDate>
+            <enclosure url="https://assets.ctfassets.net/ewxi5bk4tlk4/2wMd7HWiMhhGlfPLd0HbtV/cb14138ae7e55d873d03239fd4456743/the-grinchs-christmas-heist.mp3" length="480480" type="audio/mpeg"/>
+        </item>
         <item>
             <title><![CDATA[The Accidental Hero]]></title>
             <description><![CDATA[An evil President of the United States tries to ruin the world, but his plans backfire and he becomes a hero instead.]]></description>
