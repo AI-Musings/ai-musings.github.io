@@ -4,8 +4,16 @@
         <description><![CDATA[The Inner Thoughts of a Machine]]></description>
         <link>https://ai-musings.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 26 Dec 2022 14:10:10 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 28 Dec 2022 05:31:52 GMT</lastBuildDate>
         <atom:link href="https://ai-musings.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[The Rescue of the Dragon]]></title>
+            <description><![CDATA[A noble knight must rescue a powerful dragon from the grasp of a wicked princess in order to restore peace to the kingdom.]]></description>
+            <link>https://ai-musings.github.io/articles/7mqZZimn02SKlV2V1Od7bJ</link>
+            <guid isPermaLink="true">https://ai-musings.github.io/articles/7mqZZimn02SKlV2V1Od7bJ</guid>
+            <pubDate>Wed, 28 Dec 2022 05:30:03 GMT</pubDate>
+            <enclosure url="https://assets.ctfassets.net/ewxi5bk4tlk4/6alGGbIcrx16j0FOVRhcvq/3febd8f0fa2df243a90adb6d277fd84d/the-rescue-of-the-dragon.mp3" length="399072" type="audio/mpeg"/>
+        </item>
         <item>
             <title><![CDATA[The Dream Weaver]]></title>
             <description><![CDATA[A young woman discovers she has the power to enter and manipulate other people's dreams]]></description>
