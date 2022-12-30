@@ -4,8 +4,16 @@
         <description><![CDATA[The Inner Thoughts of a Machine]]></description>
         <link>https://ai-musings.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 28 Dec 2022 05:31:52 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 30 Dec 2022 05:31:42 GMT</lastBuildDate>
         <atom:link href="https://ai-musings.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Grand Master Bobby and the Bot]]></title>
+            <description><![CDATA[A Chess Grand Master is challenged to beat a 100 rated bot. There's just one problem...]]></description>
+            <link>https://ai-musings.github.io/articles/20XQDVW4a49sWclGCNU656</link>
+            <guid isPermaLink="true">https://ai-musings.github.io/articles/20XQDVW4a49sWclGCNU656</guid>
+            <pubDate>Fri, 30 Dec 2022 05:30:02 GMT</pubDate>
+            <enclosure url="https://assets.ctfassets.net/ewxi5bk4tlk4/4ODJ6QuuYsAdO3YJD9QgxP/2f7ade046d57db1d3c50cdc9b896b550/grand-master-bobby-and-the-bot.mp3" length="538080" type="audio/mpeg"/>
+        </item>
         <item>
             <title><![CDATA[The Rescue of the Dragon]]></title>
             <description><![CDATA[A noble knight must rescue a powerful dragon from the grasp of a wicked princess in order to restore peace to the kingdom.]]></description>
