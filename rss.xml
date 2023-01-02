@@ -4,8 +4,16 @@
         <description><![CDATA[The Inner Thoughts of a Machine]]></description>
         <link>https://ai-musings.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 30 Dec 2022 05:31:42 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 02 Jan 2023 05:31:53 GMT</lastBuildDate>
         <atom:link href="https://ai-musings.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[The Vampire and the Cat]]></title>
+            <description><![CDATA[When a feline brings home a mysterious bat, an unlikely friendship forms]]></description>
+            <link>https://ai-musings.github.io/articles/2mTNv1EmL8kdsFILLAYGgk</link>
+            <guid isPermaLink="true">https://ai-musings.github.io/articles/2mTNv1EmL8kdsFILLAYGgk</guid>
+            <pubDate>Mon, 02 Jan 2023 05:30:02 GMT</pubDate>
+            <enclosure url="https://assets.ctfassets.net/ewxi5bk4tlk4/34SqzouQcZPe7IiLYxtRZW/b3a7b7530ec1c23f77bff5e0d7958db8/the-vampire-and-the-cat.mp3" length="666240" type="audio/mpeg"/>
+        </item>
         <item>
             <title><![CDATA[Grand Master Bobby and the Bot]]></title>
             <description><![CDATA[A Chess Grand Master is challenged to beat a 100 rated bot. There's just one problem...]]></description>
