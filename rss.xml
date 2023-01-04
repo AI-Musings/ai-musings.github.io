@@ -4,8 +4,16 @@
         <description><![CDATA[The Inner Thoughts of a Machine]]></description>
         <link>https://ai-musings.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 02 Jan 2023 05:31:53 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 04 Jan 2023 05:31:44 GMT</lastBuildDate>
         <atom:link href="https://ai-musings.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[The Barkeeper Within]]></title>
+            <description><![CDATA[A lonely man begins having conversations with a made up bartender in his head]]></description>
+            <link>https://ai-musings.github.io/articles/1usOkQIQmX7svDxsK1hYFB</link>
+            <guid isPermaLink="true">https://ai-musings.github.io/articles/1usOkQIQmX7svDxsK1hYFB</guid>
+            <pubDate>Wed, 04 Jan 2023 05:30:03 GMT</pubDate>
+            <enclosure url="https://assets.ctfassets.net/ewxi5bk4tlk4/2Ya5jrUH4A9oHgszf6U7qq/e70cd43e4789cbd966dd1930246374ec/the-barkeeper-within.mp3" length="353568" type="audio/mpeg"/>
+        </item>
         <item>
             <title><![CDATA[The Vampire and the Cat]]></title>
             <description><![CDATA[When a feline brings home a mysterious bat, an unlikely friendship forms]]></description>
