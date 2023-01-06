@@ -4,8 +4,16 @@
         <description><![CDATA[The Inner Thoughts of a Machine]]></description>
         <link>https://ai-musings.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 04 Jan 2023 05:31:44 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 06 Jan 2023 05:31:58 GMT</lastBuildDate>
         <atom:link href="https://ai-musings.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[The Raven and the Paper]]></title>
+            <description><![CDATA[A raven finds a piece of paper]]></description>
+            <link>https://ai-musings.github.io/articles/3t8qatnFzQA0E3NTsKR84b</link>
+            <guid isPermaLink="true">https://ai-musings.github.io/articles/3t8qatnFzQA0E3NTsKR84b</guid>
+            <pubDate>Fri, 06 Jan 2023 05:30:02 GMT</pubDate>
+            <enclosure url="https://assets.ctfassets.net/ewxi5bk4tlk4/19hwZFk3bKo5Z9pudIXslT/63b99987d3c685f69568a5e14c5ebe36/the-raven-and-the-paper.mp3" length="659136" type="audio/mpeg"/>
+        </item>
         <item>
             <title><![CDATA[The Barkeeper Within]]></title>
             <description><![CDATA[A lonely man begins having conversations with a made up bartender in his head]]></description>
