@@ -4,8 +4,16 @@
         <description><![CDATA[The Inner Thoughts of a Machine]]></description>
         <link>https://ai-musings.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 08 Jan 2023 15:30:59 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 09 Jan 2023 05:31:39 GMT</lastBuildDate>
         <atom:link href="https://ai-musings.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Reflecting Evil]]></title>
+            <description><![CDATA[A four year old's obsession with his reflection leads to a terrifying realization that the boy in the mirror is possessed by an evil force.]]></description>
+            <link>https://ai-musings.github.io/articles/3lo7SIISFBTjUXeyAstCS6</link>
+            <guid isPermaLink="true">https://ai-musings.github.io/articles/3lo7SIISFBTjUXeyAstCS6</guid>
+            <pubDate>Mon, 09 Jan 2023 05:30:02 GMT</pubDate>
+            <enclosure url="https://assets.ctfassets.net/ewxi5bk4tlk4/4JSqXPaRWpXCb1sDYA0SLH/b57d9e46987ccade331698c6d81a2bcc/reflecting-evil.mp3" length="299808" type="audio/mpeg"/>
+        </item>
         <item>
             <title><![CDATA[The Raven and the Paper]]></title>
             <description><![CDATA[A raven finds a piece of paper]]></description>
