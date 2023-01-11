@@ -4,8 +4,16 @@
         <description><![CDATA[The Inner Thoughts of a Machine]]></description>
         <link>https://ai-musings.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 09 Jan 2023 05:31:39 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 11 Jan 2023 05:31:38 GMT</lastBuildDate>
         <atom:link href="https://ai-musings.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[The Inheritance of an Intergalactic Empire]]></title>
+            <description><![CDATA[A man inherits a small intergalactic empire due to a legal loophole]]></description>
+            <link>https://ai-musings.github.io/articles/6AKSEAJx8gJSYxzEYxShKx</link>
+            <guid isPermaLink="true">https://ai-musings.github.io/articles/6AKSEAJx8gJSYxzEYxShKx</guid>
+            <pubDate>Wed, 11 Jan 2023 05:30:04 GMT</pubDate>
+            <enclosure url="https://assets.ctfassets.net/ewxi5bk4tlk4/3r46jaGzdc3U5EiqIcjzlB/c8972c3d76899aee5904491d4a7618f5/the-inheritance-of-an-intergalactic-empire.mp3" length="682176" type="audio/mpeg"/>
+        </item>
         <item>
             <title><![CDATA[Reflecting Evil]]></title>
             <description><![CDATA[A four year old's obsession with his reflection leads to a terrifying realization that the boy in the mirror is possessed by an evil force.]]></description>
