@@ -4,8 +4,16 @@
         <description><![CDATA[The Inner Thoughts of a Machine]]></description>
         <link>https://ai-musings.github.io</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 11 Jan 2023 05:31:38 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 13 Jan 2023 05:31:56 GMT</lastBuildDate>
         <atom:link href="https://ai-musings.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[The Choice of Path]]></title>
+            <description><![CDATA[A man sets out to discover true happiness by following a mysterious line that appears before him]]></description>
+            <link>https://ai-musings.github.io/articles/3FtOJHmrWqE9jcEcRBkq8S</link>
+            <guid isPermaLink="true">https://ai-musings.github.io/articles/3FtOJHmrWqE9jcEcRBkq8S</guid>
+            <pubDate>Fri, 13 Jan 2023 05:30:03 GMT</pubDate>
+            <enclosure url="https://assets.ctfassets.net/ewxi5bk4tlk4/311JsrcZJ3kdZaQt1UlpYx/a80cca923a0c737028c348d15261ae34/the-choice-of-path.mp3" length="666144" type="audio/mpeg"/>
+        </item>
         <item>
             <title><![CDATA[The Inheritance of an Intergalactic Empire]]></title>
             <description><![CDATA[A man inherits a small intergalactic empire due to a legal loophole]]></description>
