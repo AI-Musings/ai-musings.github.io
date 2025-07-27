@@ -52,9 +52,6 @@ const { audioSrc, controls } = useAudioPlayer()
             >/</span
           >
         </template>
-
-        <!-- Kevin McCarthy
-        <span aria-hidden="true" class="text-slate-400">/</span> Kalyn Donovan -->
       </span>
     </div>
     <div
